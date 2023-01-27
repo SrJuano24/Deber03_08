@@ -17,7 +17,7 @@ import servicio.PeliculaServiceImpl;
 
 /**
  *
- * @author David
+ * @author SrJuano
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
 
