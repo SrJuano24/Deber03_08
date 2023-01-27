@@ -75,7 +75,7 @@ public class ActorControl {
 
     public void modificar(String[] data) {
         try {
-            var retorno = "No se puede crear Universidad:";
+            var retorno = "No se puede crear el actor:";
 
             var codigoActor = Integer.valueOf(data[0]).intValue();
             var nombreActor = data[1];
@@ -92,7 +92,7 @@ public class ActorControl {
 
             } else {
                 if (pelicula == null) {
-                    retorno += " Universidad fuera del registro ";
+                    retorno += " Pelicula fuera del registro ";
                 } else {
                     var actor = new Actor(codigoActor, nombreActor, lugarNacimiento, edad, genero, nominaciones, numeroNominaciones, pelicula);
                     if (!this.codigoActual(actormodificar)) {

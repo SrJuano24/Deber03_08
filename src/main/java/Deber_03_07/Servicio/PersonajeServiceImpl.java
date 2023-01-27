@@ -32,9 +32,8 @@ public class PersonajeServiceImpl implements PersonajeService {
     @Override
     public void crear(Personaje personaje) {
         this.personajeList.add(personaje);
-         this.almacenarArchivo(personaje, "C:/Netbeans1/personaje.dat");
-        
-        
+        this.almacenarArchivo(personaje, "C:/Netbeans1/personaje.dat");
+
     }
 
     @Override
@@ -53,6 +52,7 @@ public class PersonajeServiceImpl implements PersonajeService {
             }
 
         }
+        this.ReGrabar();
     }
 
     @Override
@@ -64,48 +64,46 @@ public class PersonajeServiceImpl implements PersonajeService {
                 this.personajeList.remove(indice);
 
             }
-
+            this.ReGrabar();
         }
     }
 
     @Override
     public List<Personaje> recuperarArchivo(String ruta) {
-        List<Personaje> personajeList= new ArrayList<Personaje>();
-        
-        
-        ObjectInputStream entrada =null;
-        try{
-            var fis=new FileInputStream(new File(ruta));
-            while(fis.available()>0){
-            entrada = new ObjectInputStream(fis);
-            Personaje personaje = (Personaje) entrada.readObject();
-            personajeList.add(personaje);
-            
-            
+        List<Personaje> personajeList = new ArrayList<Personaje>();
+
+        ObjectInputStream entrada = null;
+        try {
+            var fis = new FileInputStream(new File(ruta));
+            while (fis.available() > 0) {
+                entrada = new ObjectInputStream(fis);
+                Personaje personaje = (Personaje) entrada.readObject();
+                personajeList.add(personaje);
+
             }
             entrada.close();
- 
-        }catch(Exception ex){
+
+        } catch (Exception ex) {
             try {
                 entrada.close();
             } catch (IOException ex1) {
                 Logger.getLogger(PersonajeServiceImpl.class.getName()).log(Level.SEVERE, null, ex1);
             }
         }
-    return  personajeList;
+        return personajeList;
     }
 
     @Override
     public void almacenarArchivo(Personaje personaje, String ruta) {
-        ObjectOutputStream salida=null;
-        
+        ObjectOutputStream salida = null;
+
         try {
             salida = new ObjectOutputStream(new FileOutputStream(ruta, true));
             salida.writeObject(personaje);
             salida.close();
-        
+
         } catch (Exception ex) {
-            
+
             Logger.getLogger(PersonajeServiceImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -118,4 +116,13 @@ public class PersonajeServiceImpl implements PersonajeService {
         return personajeList;
     }
 
+    public void ReGrabar() {
+        var Borrarfile = new File("C:/Netbeans1/personaje.dat");
+        Borrarfile.delete();
+
+        for (var i = 0; i < personajeList.size(); i++) {
+            this.almacenarArchivo(personajeList.get(i), "C:/Netbeans1/personaje.dat");
+
+        }
+    }
 }

@@ -52,7 +52,8 @@ public class ActorServiceImpl implements ActorService {
             }
 
         }
-       
+        this.ReGrabar();
+
     }
 
     @Override
@@ -64,9 +65,8 @@ public class ActorServiceImpl implements ActorService {
                 this.actorList.remove(indice);
 
             }
-
+            this.ReGrabar();
         }
-        
 
     }
 
@@ -132,9 +132,9 @@ public class ActorServiceImpl implements ActorService {
         }
         return retorno;
     }
-    
-     public void ReGrabar() {
-        var Borrarfile = new File("C:/Netbeans1/carrera.dat");
+
+    public void ReGrabar() {
+        var Borrarfile = new File("C:/Netbeans1/actor.dat");
         Borrarfile.delete();
 
         for (var i = 0; i < actorList.size(); i++) {

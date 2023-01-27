@@ -26,7 +26,7 @@ public class PersonajeControl {
 
     public void crear(String[] data) {
         try {
-            var retorno = "No se puede crear la Asignatura:";
+            var retorno = "No se puede crear la Personaje:";
 
             var codigoPersonaje = Integer.valueOf(data[0]).intValue();;
             var nombrePersonaje = data[1];
@@ -38,7 +38,7 @@ public class PersonajeControl {
             var actor = this.actorServiceImpl.ActorCodigo(Integer.valueOf(data[6]));
 
             if (actor == null) {
-                throw new NumberFormatException(" No existe carrera ");
+                throw new NumberFormatException(" No existe personaje ");
             }
 
             if (edadPersonaje < 0) {

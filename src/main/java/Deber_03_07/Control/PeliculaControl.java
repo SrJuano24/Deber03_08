@@ -70,7 +70,7 @@ public class PeliculaControl {
 
     public void modificar(String[] data) {
         try {
-            var retorno = "No se puede crear Universidad";
+            var retorno = "No se puede crear Pelicula";
 
             var codigoPelicula = Integer.valueOf(data[0]).intValue();
             var nombrePelicula = data[1];

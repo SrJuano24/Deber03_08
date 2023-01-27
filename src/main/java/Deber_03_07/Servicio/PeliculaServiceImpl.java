@@ -17,6 +17,8 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import Deber_03_07.Modelo.Pelicula;
+import static Deber_03_07.Servicio.ActorServiceImpl.actorList;
+import java.io.File;
 
 /**
  *
@@ -50,6 +52,7 @@ public class PeliculaServiceImpl implements PeliculaService {
             }
 
         }
+        this.ReGrabar();
     }
 
     @Override
@@ -59,10 +62,10 @@ public class PeliculaServiceImpl implements PeliculaService {
             indice++;
             if (codigo == peliculas.getCodigoPelicula()) {
                 this.peliculaList.remove(indice);
-
             }
-
+            this.ReGrabar();
         }
+        
     }
 
     @Override
@@ -121,37 +124,6 @@ public class PeliculaServiceImpl implements PeliculaService {
         PeliculaServiceImpl.peliculaList = peliculaList;
     }
 
-    public void ModificarArchivo(Pelicula universidad, int indice, String ruta) {
-        /*ficheroEntrada =new File("clientes.dat");
-ficheroSalida = new File("temporal.dat");
-try(FileInputStream flujoEntrada = new FileInputStream(ficheroEntrada);
-    FileOutputStream flujoSalida = new FileOutputStream (ficheroSalida))
-{
-    lector = new ObjectInputStream (flujoEntrada);
-    escritor = new ObjectOutputStream(flujoSalida); 
-    Cliente cliente;
-    while(true)
-    { 
-        cliente = (Cliente)lector.readObject();
-        if(!borrarNif.equals(cliente.dni))
-        {
-            escritor.writeObject(cliente);
-        }   
-    }
-}
-catch (FileNotFoundException fnfe)
-{
-    System.out.println("Fichero no encontrado");
-}
-catch (IOException ioe)
-{
-    //ioe.printStackTrace();
-}
-ficheroEntrada.delete();
-ficheroSalida.renameTo(ficheroEntrada);*/
-
-    }
-
     @Override
     public Pelicula PeliculaCodigo(int codigo) {
         Pelicula retorno = null;
@@ -163,5 +135,12 @@ ficheroSalida.renameTo(ficheroEntrada);*/
             }
         }
         return retorno;
+    }
+
+    public void ReGrabar() {
+        var Borrarfile = new File("C:/Netbeans1/pelicula.dat");
+        Borrarfile.delete();
+
+       
     }
 }
