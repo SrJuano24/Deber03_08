@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package servicio;
+package Deber_03_07.Servicio;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import modelo.Actor;
-import modelo.Pelicula;
+import Deber_03_07.Modelo.Actor;
+import Deber_03_07.Modelo.Pelicula;
 
 /**
  *
@@ -52,6 +52,7 @@ public class ActorServiceImpl implements ActorService {
             }
 
         }
+       
     }
 
     @Override
@@ -65,6 +66,7 @@ public class ActorServiceImpl implements ActorService {
             }
 
         }
+        
 
     }
 
@@ -129,5 +131,16 @@ public class ActorServiceImpl implements ActorService {
             }
         }
         return retorno;
+    }
+    
+     public void ReGrabar() {
+        var Borrarfile = new File("C:/Netbeans1/carrera.dat");
+        Borrarfile.delete();
+
+        for (var i = 0; i < actorList.size(); i++) {
+            this.almacenarArchivo(actorList.get(i), "C:/Netbeans1/actor.dat");
+
+        }
+
     }
 }

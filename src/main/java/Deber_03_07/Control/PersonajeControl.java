@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controlador;
+package Deber_03_07.Control;
 
 import java.time.LocalDate;
 import java.util.List;
 
-import modelo.Personaje;
-import servicio.ActorServiceImpl;
-import servicio.PersonajeServiceImpl;
+import Deber_03_07.Modelo.Personaje;
+import Deber_03_07.Servicio.ActorServiceImpl;
+import Deber_03_07.Servicio.PersonajeServiceImpl;
 
 /**
  *
@@ -80,7 +80,7 @@ public class PersonajeControl {
 
     public void modificar(String[] data) {
         try {
-            var retorno = "No se puede crear la Asignatura:";
+            var retorno = "No se puede modificar el personaje:";
 
             var codigoPersonaje = Integer.valueOf(data[0]).intValue();;
             var nombrePersonaje = data[1];

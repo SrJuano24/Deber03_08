@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package modelo;
+package Deber_03_07.Modelo;
 
 import java.io.Serializable;
-import modelo.Actor;
+import Deber_03_07.Modelo.Actor;
 
 /**
  *

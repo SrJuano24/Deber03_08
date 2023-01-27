@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package servicio;
+package Deber_03_07.Servicio;
 
-import modelo.Personaje;
+import Deber_03_07.Modelo.Personaje;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static servicio.PersonajeServiceImpl.personajeList;
+import static Deber_03_07.Servicio.PersonajeServiceImpl.personajeList;
 
 /**
  *

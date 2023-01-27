@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package servicio;
+package Deber_03_07.Servicio;
 
 import java.util.List;
-import modelo.Pelicula;
+import Deber_03_07.Modelo.Pelicula;
 
 /**
  *

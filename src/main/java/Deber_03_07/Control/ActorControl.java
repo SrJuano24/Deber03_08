@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controlador;
+package Deber_03_07.Control;
 
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
-import servicio.ActorServiceImpl;
-import modelo.Actor;
-import servicio.PeliculaServiceImpl;
+import Deber_03_07.Servicio.ActorServiceImpl;
+import Deber_03_07.Modelo.Actor;
+import Deber_03_07.Servicio.PeliculaServiceImpl;
 
 /**
  *

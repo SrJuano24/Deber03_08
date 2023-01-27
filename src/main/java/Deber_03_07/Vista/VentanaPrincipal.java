@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package vista;
+package Deber_03_07.Vista;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import javax.swing.JInternalFrame;
-import modelo.Personaje;
-import modelo.Actor;
-import modelo.Pelicula;
-import servicio.PersonajeServiceImpl;
-import servicio.ActorServiceImpl;
-import servicio.PeliculaServiceImpl;
+import Deber_03_07.Modelo.Personaje;
+import Deber_03_07.Modelo.Actor;
+import Deber_03_07.Modelo.Pelicula;
+import Deber_03_07.Servicio.PersonajeServiceImpl;
+import Deber_03_07.Servicio.ActorServiceImpl;
+import Deber_03_07.Servicio.PeliculaServiceImpl;
 
 /**
  *
@@ -22,18 +22,18 @@ import servicio.PeliculaServiceImpl;
 public class VentanaPrincipal extends javax.swing.JFrame {
 
     private Ventana_Pelicula_Crear ventanaPeliculaCrear;
-    //private Ventana_Pelicula_Modificar ventanaPeliculaModificar;
-    //private Ventana_Pelicula_Eliminar ventanaPeliculaEliminar;
+    private Ventana_Pelicula_Modificar ventanaPeliculaModificar;
+    private Ventana_Pelicula_Eliminar ventanaPeliculaEliminar;
     private Ventana_Pelicula_Listar ventanaPeliculaListar;
 
     private Ventana_Actor_Crear ventanaActorCrear;
-    //  private Ventana_Actor_Modificar ventanaActorModificar;
-    //private Ventana_Actor_Eliminar ventanaActorEliminar;
+    private Ventana_Actor_Modificar ventanaActorModificar;
+    private Ventana_Actor_Eliminar ventanaActorEliminar;
     private Ventana_Actor_Listar ventanaActorListar;
 
     private Ventana_Personaje_Crear ventanaPersonajeCrear;
-    // private Ventana_Personaje_Modificar ventanaPersonajeModificar;
-    //private Ventana_Personaje_Eliminar ventanaPersonajeEliminar;
+    private Ventana_Personaje_Modificar ventanaPersonajeModificar;
+    private Ventana_Personaje_Eliminar ventanaPersonajeEliminar;
     private Ventana_Personaje_Listar ventanaPersonajeListar;
 
     /**
@@ -224,7 +224,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
-       
+        this.ventanaActorEliminar = new Ventana_Actor_Eliminar();
+        ventanaActorEliminar.setVisible(true);
+        ventanaActorEliminar.setResizable(true);
+        ventanaActorEliminar.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
+        ventanaActorEliminar.setClosable(true);
+        ventanaActorEliminar.setIconifiable(true);
+
+        this.jDesktopPane1.add(this.ventanaActorEliminar);
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem12ActionPerformed
@@ -244,16 +251,25 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+   this.ventanaPeliculaModificar = new Ventana_Pelicula_Modificar();
+        ventanaPeliculaModificar.setVisible(true);
+        ventanaPeliculaModificar.setResizable(true);
+        ventanaPeliculaModificar.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
+        ventanaPeliculaModificar.setClosable(true);
+        ventanaPeliculaModificar.setIconifiable(true);
 
-        
-
+        this.jDesktopPane1.add(this.ventanaPeliculaModificar);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-
-       
-
+  this.ventanaPeliculaEliminar = new Ventana_Pelicula_Eliminar();
+        ventanaPeliculaEliminar.setVisible(true);
+        ventanaPeliculaEliminar.setResizable(true);
+        ventanaPeliculaEliminar.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
+        ventanaPeliculaEliminar.setClosable(true);
+        ventanaPeliculaEliminar.setIconifiable(true);
+        this.jDesktopPane1.add(this.ventanaPeliculaEliminar);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
@@ -271,7 +287,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-       
+        this.ventanaActorModificar = new Ventana_Actor_Modificar();
+        ventanaActorModificar.setVisible(true);
+        ventanaActorModificar.setResizable(true);
+        ventanaActorModificar.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
+        ventanaActorModificar.setClosable(true);
+        ventanaActorModificar.setIconifiable(true);
+
+        this.jDesktopPane1.add(this.ventanaActorModificar);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem6ActionPerformed
@@ -303,14 +326,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-     
+ this.ventanaPersonajeModificar = new Ventana_Personaje_Modificar();
+        ventanaPersonajeModificar.setVisible(true);
+        ventanaPersonajeModificar.setResizable(true);
+        ventanaPersonajeModificar.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
+        ventanaPersonajeModificar.setClosable(true);
+        ventanaPersonajeModificar.setIconifiable(true);
 
+        this.jDesktopPane1.add(this.ventanaPersonajeModificar);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+ this.ventanaPersonajeEliminar = new Ventana_Personaje_Eliminar();
+        ventanaPersonajeEliminar.setVisible(true);
+        ventanaPersonajeEliminar.setResizable(true);
+        ventanaPersonajeEliminar.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
+        ventanaPersonajeEliminar.setClosable(true);
+        ventanaPersonajeEliminar.setIconifiable(true);
 
-
+        this.jDesktopPane1.add(this.ventanaPersonajeEliminar);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
